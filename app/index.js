@@ -6,10 +6,13 @@ import { COLORS, icons, images, SIZES } from "../constants";
 import {
   Nearbyjobs, Popularjobs, ScreenHeaderBtn, Welcome
 } from '../components';
+import { useState } from "react";
 
 
 const Home = () => {
   const router = useRouter();
+
+  const [searchTerm, setSearchTerm] = useState("");
 
 
   return (
@@ -36,7 +39,15 @@ const Home = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
 
         <View style={{ flex: 1, padding: SIZES.medium }}>
-          <Welcome />
+          <Welcome
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            handleChick={() => {
+              if (searchTerm) {
+                router.push(`/search/${searchTerm}`)
+              }
+            }}
+          />
           <Popularjobs />
           <Nearbyjobs />
 

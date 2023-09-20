@@ -8,6 +8,21 @@
       "expo-router"
     ],
     "name": "jobs",
-    "slug": "jobs"
+    "slug": "job-search",
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f62e0729-636d-4642-b5ab-20aa9811f30e"
+      }
+    },
+    "owner": "lautarolazzeri",
+    "android": {
+      "package": "com.lautarolazzeri.jobsearch"
+    },
+    "ios": {
+      "bundleIdentifier": "com.lautarolazzeri.jobsearch"
+    }
   }
 }
